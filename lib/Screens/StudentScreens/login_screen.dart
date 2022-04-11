@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:smart_study_planner_biit/Controllers/student_controller.dart';
 import 'package:smart_study_planner_biit/Screens/StudentScreens/student_dashboard_screen.dart';
+import 'package:smart_study_planner_biit/Screens/TeacherScreens/teacher_dashboard.dart';
 import 'package:smart_study_planner_biit/config.dart';
 
 class Login extends StatelessWidget {
@@ -96,7 +97,8 @@ class Login extends StatelessWidget {
                               Expanded(child: SizedBox()),
                               ElevatedButton(
                                   onPressed: () => {
-                                        Get.to(Student_DashBoard())
+                                        // Get.to(Student_DashBoard())
+                                        Get.to(TeacherDashboard())
                                         // studentController.fetchStudents()
                                       },
                                   style: ElevatedButton.styleFrom(

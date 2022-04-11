@@ -23,9 +23,12 @@ class StudentCourseCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: width * 0.8,
       height: height * 0.1,
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(10)),
       child: InkWell(
         onTap: courseDetails,
         child: Row(
