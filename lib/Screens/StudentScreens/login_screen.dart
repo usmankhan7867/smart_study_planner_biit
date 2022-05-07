@@ -43,14 +43,20 @@ class Login extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     )),
                 SizedBox(height: height * 0.02),
-                Obx(
-                  () => Text(studentController.students.length.toString(),
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontWeight: FontWeight.w700,
-                      )),
-                ),
+                // Obx(
+                //   () => Text(studentController.students.length.toString(),
+                //       style: TextStyle(
+                //         color: Colors.white,
+                //         fontSize: 40,
+                //         fontWeight: FontWeight.w700,
+                //       )),
+                // ),
+                Text("Login",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                      fontWeight: FontWeight.w700,
+                    )),
                 SizedBox(height: height * 0.03),
                 Expanded(
                   child: Container(
@@ -97,8 +103,8 @@ class Login extends StatelessWidget {
                               Expanded(child: SizedBox()),
                               ElevatedButton(
                                   onPressed: () => {
-                                        // Get.to(Student_DashBoard())
-                                        Get.to(TeacherDashboard())
+                                        Get.to(Student_DashBoard())
+                                        // Get.to(TeacherDashboard())
                                         // studentController.fetchStudents()
                                       },
                                   style: ElevatedButton.styleFrom(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:smart_study_planner_biit/Screens/view_timetable.dart';
 import 'package:smart_study_planner_biit/Widgets/student_info_header.dart';
 import 'package:smart_study_planner_biit/config.dart';
 
@@ -47,7 +48,15 @@ class StudentTimeTable extends StatelessWidget {
           height: 40,
           color: black,
         ),
-        teacherNameCard(width, teacherCardFunc, student_avatar, teacherName),
+        teacherNameCard(
+            width,
+            () => {
+                  Get.to(ViewTimetable(), arguments: {
+                    "cName": teacherName,
+                  })
+                },
+            student_avatar,
+            teacherName),
         Divider(
           indent: 40,
           endIndent: 40,
@@ -93,11 +102,8 @@ class StudentTimeTable extends StatelessWidget {
     )));
   }
 
-  SizedBox teacherNameCard(
-      double width,
-      Map<dynamic, dynamic> teacherCardFunc(),
-      String student_avatar,
-      String teacherName) {
+  SizedBox teacherNameCard(double width, final teacherCardFunc,
+      String student_avatar, String teacherName) {
     return SizedBox(
       width: width * 0.8,
       child: InkWell(

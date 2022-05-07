@@ -291,13 +291,6 @@ class DisplayTaskDateTime extends StatelessWidget {
               borderRadius: BorderRadius.circular(20)),
           child: Text("11", style: TextStyle(letterSpacing: 2, fontSize: 18)),
         ),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          decoration: BoxDecoration(
-              border: Border.all(color: primary),
-              borderRadius: BorderRadius.circular(20)),
-          child: Text("30", style: TextStyle(letterSpacing: 2, fontSize: 18)),
-        ),
         Column(children: [
           Container(
             width: 10,
@@ -317,6 +310,13 @@ class DisplayTaskDateTime extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100)),
           ),
         ]),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          decoration: BoxDecoration(
+              border: Border.all(color: primary),
+              borderRadius: BorderRadius.circular(20)),
+          child: Text("30", style: TextStyle(letterSpacing: 2, fontSize: 18)),
+        ),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
